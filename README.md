@@ -3,22 +3,22 @@
 
 🔹 **Analista de Dados | Automação de Processos | Inteligência Artificial**  
 🔹 **Desenvolvimento No-Code & Data-Driven**  
-🔹 **Excel Avançado | Python | VBA**  
+🔹 **Excel | Python | VBA**  
 
 ---
 
 ## 📊 **Minhas Estatísticas**
 
 <div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=djrenanzinho&show_icons=true&theme=radical&count_private=true"/>
-  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=djrenanzinho&theme=radical"/>
+  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=RenanManhaes&show_icons=true&theme=radical&count_private=true"/>
+  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=RenanManhaes&theme=radical"/>
 </div>
 
 ---
 
 <!--
 ## 📊 **Minhas Contribuições**
-![Snake animation](https://github.com/djrenanzinho/djrenanzinho/blob/output/github-contribution-grid-snake.svg)
+![Snake animation](https://github.com/RenanManhaes/RenanManhaes/blob/output/github-contribution-grid-snake.svg)
 
 ---
 -->
@@ -47,7 +47,7 @@
   <a href="mailto:renannascimento0304@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail">
   </a>
-  <a href="https://github.com/djrenanzinho" target="_blank">
+  <a href="https://github.com/RenanManhaes" target="_blank">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
   </a>
 </div>
