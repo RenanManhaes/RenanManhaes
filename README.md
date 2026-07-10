@@ -3,7 +3,7 @@
 
 🔹 **Analista de Dados | Automação de Processos | Inteligência Artificial**  
 🔹 **Desenvolvimento No-Code & Data-Driven**  
-🔹 **Excel | Python | VBA**  
+🔹 **Excel | Python | TypeScript | VBA**  
 
 ---
 
