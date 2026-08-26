@@ -2,19 +2,7 @@
 🚀 Apaixonado por tecnologia, automação e análise de dados.  
 
 🔹 **Analista de Dados | Automação de Processos | Inteligência Artificial**  
-🔹 **Desenvolvimento No-Code & Data-Driven**  
 🔹 **Excel | Python | TypeScript | VBA**  
-
----
-
-## 📊 **Minhas Estatísticas**
-
-<div align="center">
-  <img height="180em" src="https://github-readme-stats.vercel.app/api?username=RenanManhaes&show_icons=true&theme=radical&count_private=true"/>
-  <img height="180em" src="https://github-readme-streak-stats.herokuapp.com/?user=RenanManhaes&theme=radical"/>
-</div>
-
----
 
 <!--
 ## 📊 **Minhas Contribuições**
