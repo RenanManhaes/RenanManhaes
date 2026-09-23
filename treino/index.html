@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0a0d10">
+<title>Treinos do Renan</title>
+<style>
+:root{--bg:#090c0f;--card:#12171d;--card2:#0d1217;--line:#26303a;--text:#f4f7fb;--muted:#a8b2bf;--accent:#a8ff35;--accent2:#83db19}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:linear-gradient(180deg,#080b0e,#0b1014 38%,#080b0e);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+button{font:inherit}.app{max-width:760px;margin:0 auto;padding:22px 16px 54px}
+.brand{display:flex;align-items:center;gap:10px;margin-bottom:28px}.mark{width:38px;height:38px;border-radius:12px;background:var(--accent);color:#0a0d10;display:grid;place-items:center;font-weight:900}.brand b{font-size:18px}.brand span{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.hero{padding:8px 2px 24px}.hero small{color:var(--accent);font-weight:800;letter-spacing:.08em;text-transform:uppercase}.hero h1{font-size:34px;line-height:1.03;margin:9px 0 10px;letter-spacing:-.035em}.hero p{margin:0;color:var(--muted);font-size:16px;line-height:1.5}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.workout-btn{appearance:none;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:20px;padding:18px;text-align:left;min-height:128px;cursor:pointer;transition:.15s ease}.workout-btn:active{transform:scale(.98)}.workout-btn .letter{display:inline-grid;place-items:center;width:42px;height:42px;border-radius:13px;background:#202832;color:var(--accent);font-size:22px;font-weight:900;margin-bottom:14px}.workout-btn strong{display:block;font-size:17px;margin-bottom:4px}.workout-btn span{display:block;color:var(--muted);font-size:13px;line-height:1.35}
+.view{display:none}.view.active{display:block}.topbar{position:sticky;top:0;z-index:20;background:rgba(9,12,15,.94);backdrop-filter:blur(12px);padding:10px 0 12px;margin:-4px 0 14px}.topline{display:flex;align-items:center;justify-content:space-between;gap:12px}.back{border:0;background:#1a2129;color:var(--text);border-radius:12px;padding:10px 12px;font-weight:800;cursor:pointer}.tabs{display:flex;gap:6px}.tab{width:42px;height:42px;border:1px solid var(--line);border-radius:12px;background:#11161b;color:var(--muted);font-weight:900;cursor:pointer}.tab.active{background:var(--accent);border-color:var(--accent);color:#0b0e10}
+.workout-head{margin:12px 0 18px}.workout-head .eyebrow{color:var(--accent);font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.07em}.workout-head h2{font-size:30px;line-height:1.05;margin:7px 0 7px;letter-spacing:-.03em}.workout-head p{margin:0;color:var(--muted);line-height:1.45}
+.exercise{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:14px;margin:0 0 16px;overflow:hidden}.ex-head{display:flex;gap:12px;align-items:flex-start;padding:2px 2px 12px}.num{flex:0 0 38px;height:38px;border-radius:11px;background:#202832;color:var(--accent);display:grid;place-items:center;font-size:15px;font-weight:900}.ex-title{min-width:0}.ex-title h3{margin:1px 0 6px;font-size:20px;line-height:1.15;letter-spacing:-.015em}.tag{display:inline-block;background:#202832;color:#cbd4de;border:1px solid #303c48;border-radius:999px;font-size:12px;padding:5px 9px}
+.visual{position:relative;border-radius:17px;overflow:hidden;background:#fff;border:1px solid #d9dee3;min-height:190px}.pair{display:grid;grid-template-columns:1fr 1fr}.shot{position:relative;min-width:0;background:#fff}.shot:first-child{border-right:1px solid #e2e5e8}.shot img,.single img{display:block;width:100%;aspect-ratio:1/1;object-fit:contain;background:#fff}.shot-label{position:absolute;left:10px;top:9px;background:rgba(8,12,15,.82);color:#fff;border-radius:999px;padding:5px 8px;font-size:10px;font-weight:900;letter-spacing:.06em}.single{display:block}.single img{aspect-ratio:4/3;max-height:380px}.media-fallback{display:none;padding:44px 18px;text-align:center;color:#30363c;background:#f4f6f8;font-weight:700}.visual.failed .media-fallback{display:block}.visual.failed .pair,.visual.failed .single{display:none}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0}.stat{background:var(--card2);border:1px solid var(--line);border-radius:15px;padding:12px 8px;text-align:center}.stat b{font-size:18px;display:block}.stat span{display:block;color:var(--muted);font-size:10px;text-transform:uppercase;letter-spacing:.12em;margin-top:5px}
+.cue{color:#d9dfe7;line-height:1.5;font-size:14px;margin:4px 2px 10px}.details{border-top:1px solid var(--line);padding-top:10px}.details summary{cursor:pointer;color:var(--text);font-weight:800;padding:6px 2px;list-style:none}.details summary::-webkit-details-marker{display:none}.details summary:after{content:"+";float:right;color:var(--accent);font-size:20px}.details[open] summary:after{content:"–"}.details p{color:var(--muted);font-size:14px;line-height:1.52;margin:7px 2px 3px}
+.note{margin-top:22px;color:#7f8a96;font-size:11px;line-height:1.45;text-align:center}
+@media(max-width:390px){.app{padding-left:12px;padding-right:12px}.hero h1{font-size:31px}.workout-btn{padding:15px;min-height:120px}.ex-title h3{font-size:19px}.tab{width:38px;height:38px}.back{padding:9px 10px}.exercise{padding:12px}}
+@media(max-width:340px){.grid{grid-template-columns:1fr}.pair{grid-template-columns:1fr}.shot:first-child{border-right:0;border-bottom:1px solid #e2e5e8}}
+</style>
+</head>
+<body>
+<main class="app">
+<section id="home" class="view active">
+  <div class="brand"><div class="mark">R</div><div><b>Renan Training</b><span>Seu treino, direto ao ponto</span></div></div>
+  <div class="hero"><small>Treino de hoje</small><h1>Renan, qual treino você quer ver?</h1><p>Escolha a sessão e consulte execução, séries, repetições e descanso.</p></div>
+  <div class="grid" id="homeGrid"></div>
+  <div class="note">As demonstrações são referências visuais. Ajuste banco, máquina e amplitude ao seu corpo e ao equipamento disponível.</div>
+</section>
+<section id="workout" class="view">
+  <div class="topbar">
+    <div class="topline">
+      <button class="back" id="backBtn" type="button">← Início</button>
+      <div class="tabs" id="tabs"></div>
+    </div>
+  </div>
+  <div id="workoutContent"></div>
+</section>
+</main>
+<script>
+const P="https://raw.githubusercontent.com/yuhonas/free-exercise-db/main/exercises/";
+const G="https://raw.githubusercontent.com/mohamedatef90/exercise-library/main/gifs/";
+const mediaPair=id=>({kind:"pair",a:P+id+"/0.jpg",b:P+id+"/1.jpg"});
+const mediaSingle=url=>({kind:"single",url});
+const W={
+A:{title:"Peito + tríceps + abdômen",sub:"Peitoral prioritário",items:[
+["Supino inclinado com halteres","Peitoral superior","3","6–10","90 s","Incline_Dumbbell_Press","Banco inclinado, escápulas firmes e descida controlada até a linha do peito.","Mantenha o peito alto e os ombros para trás. Desça os halteres com controle e pressione sem bater um halter no outro."],
+["Chest press reto convergente","Peitoral","3","8–12","90 s","Leverage_Chest_Press","Ajuste o banco para as alças ficarem próximas à linha média do peito.","Mantenha as escápulas apoiadas. Empurre as alças para frente e aproxime-as sem perder o contato das costas com o encosto."],
+["Crossover na altura do peito","Peitoral","3","10–15","60–90 s","Cable_Crossover","Cotovelos levemente flexionados e mãos se aproximando à frente do peito.","Use o peito para fechar os braços. Evite transformar o movimento em uma empurrada de tríceps."],
+["Tríceps francês na polia","Tríceps","3","8–12","60–90 s","Cable_Rope_Overhead_Triceps_Extension","Cotovelos apontados para frente/cima e praticamente parados durante a extensão.","Alongue o tríceps atrás da cabeça e estenda os cotovelos sem abrir excessivamente os braços."],
+["Tríceps corda na polia","Tríceps","2","10–15","60–90 s","Triceps_Pushdown_-_Rope_Attachment","Cotovelos junto ao corpo; separe levemente a corda no final.","Não balance o tronco. Estenda completamente e controle a volta."],
+["Abdominal na polia","Abdômen","2","10–15","60 s","Cable_Crunch","Pense em aproximar as costelas do quadril, não em puxar a corda com os braços.","Mantenha os braços apenas como suporte e faça a flexão do tronco com o abdômen."]
+]},
+B:{title:"Posterior + glúteos + ombros",sub:"Com trapézio",items:[
+["Stiff / RDL","Posterior de coxa","3","6–10","90 s","Romanian_Deadlift","Quadril vai para trás, coluna neutra e barra próxima das pernas.","Desça até sentir alongamento dos posteriores sem perder a posição da lombar; suba estendendo o quadril."],
+["Mesa flexora","Posterior de coxa","3","8–12","90 s","Lying_Leg_Curls","Joelhos alinhados ao eixo da máquina e quadril apoiado.","Flexione os joelhos sem tirar o quadril do banco. Controle a volta e não deixe o peso despencar."],
+["Hip thrust","Glúteos","2","8–12","90 s","Barbell_Hip_Thrust","Escápulas apoiadas no banco e queixo levemente recolhido.","Suba o quadril até alinhar tronco e coxas, contraia glúteos e evite hiperestender a lombar."],
+["Elevação lateral unilateral na polia","Deltoide lateral","3","10–15","60–90 s",null,"Cabo vindo de baixo, tronco estável e braço subindo lateralmente até aproximadamente a linha do ombro.","Conduza pelo cotovelo e evite encolher o ombro. O movimento é lateral, sem impulso.",G+"wEulIzp.gif"],
+["Desenvolvimento para ombros","Ombros","2","6–10","90 s","Machine_Shoulder_Military_Press","Costas apoiadas e alças partindo aproximadamente da altura dos ombros.","Pressione para cima sem tirar a lombar do encosto. Controle a descida."],
+["Crucifixo inverso / peck deck invertido","Deltoide posterior","3","12–15","60–90 s","Reverse_Machine_Flyes","Peito apoiado, braços abrindo para os lados sem jogar o tronco.","Abra os braços espremendo a parte posterior dos ombros e a região entre as escápulas."],
+["Encolhimento com halteres","Trapézio","2","10–15","60–90 s","Dumbbell_Shrug","Braços retos e ombros subindo na direção das orelhas.","Suba e desça os ombros verticalmente. Evite rodar os ombros."]
+]},
+C:{title:"Costas + bíceps + peito",sub:"Segundo estímulo de peito",items:[
+["Puxada alta pegada neutra","Dorsais","3","6–10","90 s","V-Bar_Pulldown","Peito alto e cotovelos descendo em direção às costelas.","Evite jogar o tronco para trás. Puxe com as costas e controle a subida."],
+["Remada com peito apoiado","Costas","3","8–12","90 s","Dumbbell_Incline_Row","Peito apoiado no banco para tirar balanço da lombar.","Puxe os cotovelos para trás e aproxime as escápulas sem levantar o peito do banco."],
+["Puxada unilateral na polia","Dorsais","2","10–12","60–90 s","One_Arm_Lat_Pulldown","Puxe o cotovelo para baixo e para perto do corpo.","Mantenha o tronco estável e deixe a dorsal alongar na subida antes de puxar novamente."],
+["Pullover na polia","Dorsais","2","10–15","60–90 s","Rope_Straight-Arm_Pulldown","Braços quase estendidos; movimento vem do ombro, não do cotovelo.","Leve as mãos em direção às coxas mantendo o tronco firme e os cotovelos quase fixos."],
+["Supino inclinado na máquina","Peitoral superior","2","8–12","90 s","Leverage_Incline_Chest_Press","Ajuste o banco para empurrar em trajetória inclinada, sem elevar os ombros.","Mantenha escápulas firmes e pressione sem perder o controle da descida."],
+["Rosca Scott","Bíceps","3","8–12","60–90 s","Preacher_Curl","Braços apoiados no banco e ombros quietos.","Faça a flexão do cotovelo sem tirar o braço do apoio. Desça com controle."],
+["Rosca martelo","Bíceps / braquial","2","10–12","60–90 s","Hammer_Curls","Pegada neutra, palmas uma para a outra, cotovelos junto ao corpo.","Suba sem jogar os cotovelos para frente e controle a descida."]
+]},
+D:{title:"Quadríceps + panturrilha + ombro",sub:"Com abdômen",items:[
+["Hack squat","Quadríceps","3","6–10","90 s","Hack_Squat","Costas totalmente apoiadas e pés firmes na plataforma.","Desça com joelhos acompanhando a direção dos pés e empurre a plataforma mantendo quadril e costas apoiados."],
+["Leg press 45°","Quadríceps","3","8–12","90 s","Leg_Press","Pés firmes, lombar e quadril apoiados durante toda a repetição.","Desça até onde consegue manter a lombar no encosto; empurre sem travar violentamente os joelhos."],
+["Cadeira extensora","Quadríceps","2","10–15","60–90 s","Leg_Extensions","Joelho alinhado ao eixo da máquina e rolo acima do tornozelo.","Estenda os joelhos de forma controlada, contraia quadríceps no topo e retorne sem deixar a pilha bater."],
+["Panturrilha em pé","Panturrilhas","3","8–12","60–90 s","Standing_Calf_Raises","Suba o calcanhar o máximo possível e desça com controle.","Use amplitude completa: alongue embaixo, pause no topo e evite quicar."],
+["Panturrilha sentada","Panturrilhas","3","10–15","60–90 s","Seated_Calf_Raise","Joelhos flexionados e antepé firme na plataforma.","Deixe o calcanhar descer para alongar e suba até a contração máxima."],
+["Elevação lateral na máquina","Deltoide lateral","3","12–20","60–90 s",null,"Alinhe os ombros ao eixo da máquina e eleve os braços lateralmente sem encolher o trapézio.","Conduza pelo cotovelo, pare perto da linha dos ombros e desça controlando.", "https://cdn.motra.com/assets/6c9e43fe35/mediumThumbnail.jpg"],
+["Elevação de joelhos suspenso","Abdômen","2","8–15","60 s",null,"Evite balançar; eleve os joelhos usando o abdômen e faça uma leve retroversão da pelve no topo.","Comece pendurado e estável. Eleve os joelhos em direção ao tronco e desça devagar.",G+"uWpxD4v.gif"]
+]}
+};
+const desc={A:"9 séries diretas de peito + tríceps e core.",B:"Posterior separado do quadríceps, com prioridade para ombros e trapézio.",C:"Largura e densidade de costas, bíceps e um segundo estímulo leve de peito.",D:"Quadríceps, panturrilhas, deltoide lateral e core."};
+const homeGrid=document.getElementById("homeGrid"),tabs=document.getElementById("tabs"),content=document.getElementById("workoutContent");
+function mediaHTML(item){
+ const id=item[5],custom=item[8];
+ if(custom) return '<div class="visual"><div class="single"><img src="'+custom+'" alt="Demonstração de '+item[0]+'" loading="lazy" onerror="mediaFail(this)"><span class="shot-label">DEMONSTRAÇÃO</span></div><div class="media-fallback">A demonstração não carregou neste navegador.</div></div>';
+ const a=P+id+"/0.jpg",b=P+id+"/1.jpg";
+ return '<div class="visual"><div class="pair"><div class="shot"><img src="'+a+'" alt="'+item[0]+' - posição inicial" loading="lazy" onerror="mediaFail(this)"><span class="shot-label">INÍCIO</span></div><div class="shot"><img src="'+b+'" alt="'+item[0]+' - posição final" loading="lazy" onerror="mediaFail(this)"><span class="shot-label">FINAL</span></div></div><div class="media-fallback">A demonstração não carregou neste navegador.</div></div>';
+}
+function mediaFail(img){const v=img.closest(".visual");if(v)v.classList.add("failed")}
+function renderHome(){
+ homeGrid.innerHTML="";
+ Object.entries(W).forEach(([k,w])=>{const b=document.createElement("button");b.type="button";b.className="workout-btn";b.innerHTML='<span class="letter">'+k+'</span><strong>Treino '+k+'</strong><span>'+w.title+'</span>';b.addEventListener("click",()=>showWorkout(k));homeGrid.appendChild(b)});
+}
+function renderTabs(active){
+ tabs.innerHTML="";
+ Object.keys(W).forEach(k=>{const b=document.createElement("button");b.type="button";b.className="tab"+(k===active?" active":"");b.textContent=k;b.addEventListener("click",()=>showWorkout(k));tabs.appendChild(b)});
+}
+function showWorkout(k){
+ const w=W[k];renderTabs(k);
+ content.innerHTML='<header class="workout-head"><div class="eyebrow">Treino '+k+' · '+w.sub+'</div><h2>'+w.title+'</h2><p>'+desc[k]+'</p></header>'+w.items.map((it,i)=>'<article class="exercise"><div class="ex-head"><div class="num">'+String(i+1).padStart(2,"0")+'</div><div class="ex-title"><h3>'+it[0]+'</h3><span class="tag">'+it[1]+'</span></div></div>'+mediaHTML(it)+'<div class="stats"><div class="stat"><b>'+it[2]+'</b><span>Séries</span></div><div class="stat"><b>'+it[3]+'</b><span>Reps</span></div><div class="stat"><b>'+it[4]+'</b><span>Descanso</span></div></div><p class="cue">'+it[6]+'</p><details class="details"><summary>Como executar</summary><p>'+it[7]+'</p></details></article>').join('')+'<div class="note">Demonstrações visuais: Free Exercise DB (domínio público) e Exercise Library. O visual serve como referência de execução; ajuste a máquina ao seu corpo.</div>';
+ document.getElementById("home").classList.remove("active");document.getElementById("workout").classList.add("active");window.scrollTo({top:0,behavior:"instant"});location.hash=k;
+}
+function goHome(){document.getElementById("workout").classList.remove("active");document.getElementById("home").classList.add("active");location.hash="";window.scrollTo({top:0,behavior:"instant"})}
+document.getElementById("backBtn").addEventListener("click",goHome);
+renderHome();
+const initial=(location.hash||"").replace("#","").toUpperCase();if(W[initial])showWorkout(initial);
+window.addEventListener("hashchange",()=>{const k=(location.hash||"").replace("#","").toUpperCase();if(W[k]){if(!document.getElementById("workout").classList.contains("active"))showWorkout(k)}else if(document.getElementById("workout").classList.contains("active"))goHome()});
+</script>
+</body>
+</html>
