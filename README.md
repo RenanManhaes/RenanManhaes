@@ -6,7 +6,7 @@
 
 Construo sistemas que conectam **inteligência artificial, automação, APIs e dados** a problemas reais de negócio — da ideia à operação.
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Renan%20Manhães-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/renan-manh%C3%A3es)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Renan%20Manhães-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/renan-manhaes)
 [![GitHub](https://img.shields.io/badge/GitHub-RenanManhaes-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/RenanManhaes)
 [![Email](https://img.shields.io/badge/Email-renannascimento0304%40gmail.com-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:renannascimento0304@gmail.com)
 
